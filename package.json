@@ -1,0 +1,22 @@
+{
+  "name": "front",
+  "version": "1.0.0",
+  "description": "xuperouter first project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuperouter/front.git"
+  },
+  "author": "Sheldon Shen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xuperouter/front/issues"
+  },
+  "homepage": "https://github.com/xuperouter/front#readme",
+  "devDependencies": {
+    "webpack": "^1.13.3"
+  }
+}
