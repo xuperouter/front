@@ -1,1 +1,7 @@
 node_modules
+.idea
+logs
+*.log
+.grunt
+bower_components
+build
