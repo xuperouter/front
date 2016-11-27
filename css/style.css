@@ -2,3 +2,14 @@ div.top-title{
 	margin: 20px 0 0 0;
 	font: 40px/1 Tahoma,Helvetica,Arial,"\5b8b\4f53",sans-serif;;
 }
+
+article{
+	margin-bottom: 30px;
+}
+body{
+	height: 100%;
+	overflow: hidden;
+}
+video{
+	margin-bottom: 30px;
+}

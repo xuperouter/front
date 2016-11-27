@@ -22,17 +22,84 @@
 <body>
 	<div id="main" class="container">
 		<div class="col-md-3" style="background-color: black height:500">
-			<div class="top-title">Project</div>
+			<div id="col_projects" class="top-title">Project</div>
+			<div class="blo_project"></div>
+			<div class="blo_project"></div>
+			<div class="blo_project"></div>
 		</div>
 		<div class="col-md-3" style="background-color: black height:500">
-			<div class="top-title">Article</div>
+			<div  class="top-title">Article</div>
+			<div id="col_articles">
+				<div class="blo_article">
+					<article>
+						kzfbksbfjkbs jfhsk jfhjhjznjfhn sjfhskjnf ssfjkshfkjshn khfskjhfskjhfk jsfhkjshf k
+					</article>
+				</div>
+				<div class="blo_article">
+					<article>
+						然而对 webpack 来说，我们可以直接在上面书写 commonJS 形式的语法，无须任何 define （毕竟最终模块都打包在一起，webpack 也会最终自动加上自己的加载器）：
+					</article>
+				</div>
+				<div class="blo_article">
+					<article>
+						webpack是近期最火的一款模块加载器兼打包工具，它能把各种资源，例如JS（含JSX）、coffee、样式（含less/sass）、图片等都作为模块来使用和处理。
+我们可以直接使用 require(XXX) 的形式来引入各模块，即使它们可能需要经过编译（比如JSX和sass），但我们无须在上面花费太多心思，因为 webpack 有着各种健全的加载器（loader）在默默处理这些事情，这块我们后续会提到。
+你可以不打算将其用在你的项目上，但没有理由不去掌握它，因为以近期 Github 上各大主流的（React相关）项目来说，它们仓库上所展示的示例已经是基于 webpack 来开发的，比如 React-Boostrap 和 Redux。
+					</article>
+				</div>
+				<div class="blo_article">
+					<article>#地图投影
+1. 墨卡托投影是正轴等角圆柱投影，假设地球被围在一个中空的圆柱里面，其基准纬线与圆柱相切赤道接触，然后再假设地球中心有一盏灯，把球面上的图形投影到圆柱体上面，再把圆柱体展开。
+2. 在地图制图的生产过程中，已经出现了许多种投影，为了便于研究和使用，我们进行适当的分类：
+					</article>
+				</div>
+				<div class="blo_article">
+					<article>
+						fnjdhgiudgjhshfvbjiqfhudnkaifhqogopdbf heuhfuysgfusg usdh huqdhugf ushdg ysgudyg    uadguhdfusg
+					</article>
+				</div>
+				<div class="blo_article">
+					<article>
+						fnjdhgiudgjhshfvbjiqfhudnkaifhqogopdbf heuhfuysgfusg usdh huqdhugf ushdg ysgudyg    uadguhdfusg
+					</article>
+				</div>
+				<div class="blo_article">
+					<article>
+						fnjdhgiudgjhshfvbjiqfhudnkaifhqogopdbf heuhfuysgfusg usdh huqdhugf ushdg ysgudyg    uadguhdfusg
+					</article>
+				</div>
+			</div>
 		</div>
 		<div class="col-md-3" style="background-color: black height:500">
-			<div class="top-title">Photos</div>
+			<div id="col_photos" class="top-title">Photos</div>
+			<div class="blo_photo"></div>
+			<div class="blo_photo"></div>
+			<div class="blo_photo"></div>
+			<div class="blo_photo"></div>
 		</div>
 		<div class="col-md-3" style="background-color: black height:500">
-			<div class="top-title">Video</div>
+			<div id="col_videos" class="top-title">Video</div>
+			<div class="blo_video">
+				<video src="./resouces/movie.ogg" width="100%" onmousemove="this.play()" onmouseout="this.pause()"></video>
+				<video src="./resouces/movie.ogg" width="100%"></video>
+				<video src="./resouces/movie.ogg" width="100%"></video>
+			</div>
 		</div>
 	</div>
+
+
+	<script type="text/javascript">
+		var rDrag = {
+			o:null,
+			init:function(o){
+				o.onmusedown = this.start;
+			},
+			start:function(e){
+				var o;
+				e = rDrag.fixEvent(e);
+				e.preventDefault
+			}
+		}
+	</script>
 </body>
 </html>
