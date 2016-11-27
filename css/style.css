@@ -13,3 +13,6 @@ body{
 video{
 	margin-bottom: 30px;
 }
+#col_articles{
+	position: absolute;
+}

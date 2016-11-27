@@ -97,8 +97,34 @@
 			start:function(e){
 				var o;
 				e = rDrag.fixEvent(e);
-				e.preventDefault
+				e.preventDefault&&e.preventDefault();
+				rDrag.o = o = this;
+				o.y = e.clientY- rDrag.o.ofssetTop;
+				document.onmousemove = rDrag.move;
+				document.onmouseup = rDrag.end;
+			},
+			move:function(e){
+				e = rDrag.fixEvent(e);
+				var oTop;
+				oTop = e.clientY - rDrag.o.y;
+				rDrag.o.style.top = oTop +' px';
+			},
+			end:function(e){
+				e = rDrag.fixEvent(e);
+				rDrag.o = document.onmousemove = document.onmouseup = null;
+			},
+			fixEvent:function(e){
+				if(!e){
+					e = window.event;
+					e.target = e.srcElement;
+					e.laverY = e.offsetY;
+				}
+				return e;
 			}
+		}
+		window.onload = function(){
+			var obj = document.getElementById('col_articles');
+			rDrag.init(obj);
 		}
 	</script>
 </body>
