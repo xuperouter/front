@@ -47,14 +47,10 @@ const DashBoard = React.createClass({
   }
 })
 
-ReactDOM.render((
+ReactDOM.render(
   <Router>  
     <Route path="/" component={App}>
-      // <IndexRouter component={DashBoard} />
-      <Route path="about" component={About}/>
-      <Route path="inbox" component={Inbox}>
-        <Route path='message/:id' component={Message} />
-      </Route>
+      <Route path="about" component={About} />
+      <Route path="inbox" component={Inbox} />
     </Route>
-  </Router>
-  ),document.body)
+  </Router>,document.body)
