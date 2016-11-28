@@ -1,9 +1,10 @@
 前端技术选型： 
-1. react
-2. webpack
+1. react+webpack: 一直想尝试一个框架，以为不是很难，但当真的接触发现内容还是很多。 react本身有很多优势
+2. 打算加入glup。
+3. 目前css直接按照传统的方式，没有采用sass或者less的形式
 
 技术环境： 
-布局flex。
+布局flex:未实现
 
 dependencies:
 * webpack相关包   --$ npm install webpack webpack-dev-server html-webpack-plugin --save-dev
