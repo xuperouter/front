@@ -1,9 +1,9 @@
 var ReactDOM = require('react-dom');
 var React = require('react');
 var Footer = require('./components/footer.js');
-var WelcomeSection = require('./components/welcome_section.js');
 var RegisterForm = require('./components/RegistrationForm.jsx');
 var Register = require('./components/pages/Register.jsx');
+var Welcome = require('./components/pages/welcome.jsx');
 
 import {Router, Route, Link, hashHistory} from 'react-router';
 
@@ -18,7 +18,6 @@ var App = React.createClass({
 })
 ReactDOM.render(
   <Router history={hashHistory}>  
-    <Route path='/' component={App}>
-      <Route path="/register" component={Register} />
-    </Route>
+    <Route path='/' component={Welcome} />
+    <Route path="/register" component={Register} />
   </Router>,document.body)
