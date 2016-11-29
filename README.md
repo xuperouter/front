@@ -19,7 +19,8 @@ dependencies:
 *bootstrap\jquery\moment支持包
 	$ npm install bootstrap@4.0.0-alpha.2 --save-dev
 	$ npm install jquery moment --save-dev
-
+*antd 
+	1. package.theme: config in package.json the theme field.  
 
 structure
 * app/
@@ -34,3 +35,5 @@ structure
 
 
 
+Problems:
+1. antd no css:  import the style: import 'antd/dist/antd.css';
