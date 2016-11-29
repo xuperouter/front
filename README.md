@@ -3,6 +3,7 @@
 2. 打算加入glup。
 3. 目前css直接按照传统的方式，没有采用sass或者less的形式
 4. 前端加入React-Router来设置路由信息
+5.
 技术环境： 
 布局flex:未实现
 
@@ -43,3 +44,13 @@ Router:
 /:  
 /login: 
 /register:用户注册
+
+
+deploy：
+Ubuntu:
+1. install nginx
+
+#nginx启动和关闭：
+#nginx -c /etc/nginx/nginx.conf
+#nginx -s stop
+
