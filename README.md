@@ -2,7 +2,7 @@
 1. react+webpack: 一直想尝试一个框架，以为不是很难，但当真的接触发现内容还是很多。 react本身有很多优势
 2. 打算加入glup。
 3. 目前css直接按照传统的方式，没有采用sass或者less的形式
-
+4. 前端加入React-Router来设置路由信息
 技术环境： 
 布局flex:未实现
 
@@ -37,3 +37,9 @@ structure
 
 Problems:
 1. antd no css:  import the style: import 'antd/dist/antd.css';
+2. You are using prebuilt antd,please use https://www.npmjs.com/package/babel-plugin-import to reduce app bundle size.
+
+Router:
+/:  
+/login: 
+/register:用户注册

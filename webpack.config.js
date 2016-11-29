@@ -1,7 +1,7 @@
 var path = require('path');
 
 module.exports = {
-  entry: path.resolve(__dirname, './app/main.jsx'),
+  entry: path.resolve(__dirname, './app/index.jsx'),
   output: {
     path: path.resolve(__dirname, './build'),
     filename: 'bundle.js',
@@ -11,8 +11,9 @@ module.exports = {
       test: /\.jsx?$/,
       loader: 'babel',
       query: {
-        presets: ['es2015', 'react']
-       }
+        presets: ['es2015', 'react'],
+        plugins: [["import", [{ "libraryName": "antd", "style": true }]]]
+       },
     }, {
       test: /\.css$/,
       loader: 'style!css'
