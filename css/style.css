@@ -6,13 +6,28 @@ div.top-title{
 article{
 	margin-bottom: 30px;
 }
-body{
-	height: 100%;
-	overflow: hidden;
-}
 video{
+	width: 80%;
 	margin-bottom: 30px;
 }
-#col_articles{
-	position: absolute;
+
+.col-padding{
+	padding: 0 50px;
+}
+.main-footer{
+	color:#999;
+	clear:both;
+}
+.main-footer .copyright{
+	padding:20px 15px;
+	width: 960px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.navbar-toggle {
+	position: relative;
+	float: right;
+	padding: 9px 10px;
+	display: block;
 }

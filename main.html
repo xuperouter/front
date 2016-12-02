@@ -20,14 +20,32 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
-	<div id="main" class="container">
-		<div class="col-md-3" style="background-color: black height:500">
+	<div id="main" class="container-fluid">
+		<header class="navbar navbar-static-top">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle='collapse' data-target="#example-navbar-collapse">
+					<span class="sr-only">exchange nav</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" class="nav-brand">Easy Design</a>
+			</div>
+			<div class="collapse nav-collapse" id='example-navbar-collapse'>
+				<ul class="nav navbar-nav">
+					<li><a href="#"></a>Projects</li>
+					<li><a href="#"></a>Article</li>
+					<li><a href="#"></a>Photos</li>
+				</ul>
+			</div>
+		</header>
+		<div class="col-md-3">
 			<div id="col_projects" class="top-title">Project</div>
 			<div class="blo_project"></div>
 			<div class="blo_project"></div>
 			<div class="blo_project"></div>
 		</div>
-		<div class="col-md-3" style="background-color: black height:500">
+		<div class="col-md-3 col-padding">
 			<div  class="top-title">Article</div>
 			<div id="col_articles">
 				<div class="blo_article">
@@ -70,14 +88,14 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-3" style="background-color: black height:500">
+		<div class="col-md-3 col-padding">
 			<div id="col_photos" class="top-title">Photos</div>
 			<div class="blo_photo"></div>
 			<div class="blo_photo"></div>
 			<div class="blo_photo"></div>
 			<div class="blo_photo"></div>
 		</div>
-		<div class="col-md-3" style="background-color: black height:500">
+		<div class="col-md-3 col-padding">
 			<div id="col_videos" class="top-title">Video</div>
 			<div class="blo_video">
 				<video src="./resouces/movie.ogg" width="100%" onmousemove="this.play()" onmouseout="this.pause()"></video>
@@ -85,47 +103,15 @@
 				<video src="./resouces/movie.ogg" width="100%"></video>
 			</div>
 		</div>
+		<footer class="main-footer">
+			<div class="copyright">
+				<hr style="height:1px;boeder:none;" />
+				Copyright by Sheldon -
+				<a href="#">Connect Us -</a>
+				<a href="#">About Sheldon -</a>
+				<!-- <a href="#">About Sheldon -</a> -->
+			</div>
+		</footer>
 	</div>
-
-
-	<script type="text/javascript">
-		var rDrag = {
-			o:null,
-			init:function(o){
-				o.onmusedown = this.start;
-			},
-			start:function(e){
-				var o;
-				e = rDrag.fixEvent(e);
-				e.preventDefault&&e.preventDefault();
-				rDrag.o = o = this;
-				o.y = e.clientY- rDrag.o.ofssetTop;
-				document.onmousemove = rDrag.move;
-				document.onmouseup = rDrag.end;
-			},
-			move:function(e){
-				e = rDrag.fixEvent(e);
-				var oTop;
-				oTop = e.clientY - rDrag.o.y;
-				rDrag.o.style.top = oTop +' px';
-			},
-			end:function(e){
-				e = rDrag.fixEvent(e);
-				rDrag.o = document.onmousemove = document.onmouseup = null;
-			},
-			fixEvent:function(e){
-				if(!e){
-					e = window.event;
-					e.target = e.srcElement;
-					e.laverY = e.offsetY;
-				}
-				return e;
-			}
-		}
-		window.onload = function(){
-			var obj = document.getElementById('col_articles');
-			rDrag.init(obj);
-		}
-	</script>
 </body>
 </html>
