@@ -28,6 +28,9 @@ structure
 * app/
 	1 index.jsx(program entry)
 	2 components/ 
+	3 containers/
+	4 actions/
+	5 reducers/
 	3 utils/
 * templates 
 	1 index.html
