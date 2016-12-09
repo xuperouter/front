@@ -1,22 +1,21 @@
 import React, {Component,PropTypes} from 'react';
 import ReactDOM, {render} from 'react-dom';
-import {Provider} from 'redux';
+import {Provider} from 'react-redux';
 // route configure
-import router from './Router/Router.js';
-// import store from './Redux/Store/Store.js';
-import {createStore} from 'redux';
+import RouteConfig from './Router/Router.js';
+import store from './Store/Store.js';
+import {createStore, applyMiddleware } from 'redux';
 //default cinfigure
 import './Config/Config.js'
 
-var store = createStore();
-
-store.subscribe(()=>{
-	console.log(store.getState());
-});
+// let store = createStore(
+// 	reduces,
+// 	applyMiddleware(thunl)
+// );
 
 render(
 	<Provider store={store}>
-		{router}
+		<RouteConfig />
 	</Provider>,
 	document.body
 );

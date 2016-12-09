@@ -43,6 +43,7 @@ structure
 Problems:
 1. antd no css:  import the style: import 'antd/dist/antd.css';
 2. You are using prebuilt antd,please use https://www.npmjs.com/package/babel-plugin-import to reduce app bundle size.
+3. from 'redux' and from 'react-redux' is different
 
 Router:
 /:  
