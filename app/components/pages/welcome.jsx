@@ -1,10 +1,12 @@
 var React = require('react');
-var WelcomeSection = require('../welcome_section.jsx');
+var LoginComponent = require('../login_component.jsx');
 
 var Welcome = React.createClass({
 	render:function(){
 		return(
-			<WelcomeSection />
+			<div id="login_container">
+				<LoginComponent />
+			</div>
 		)
 	}
 })

@@ -46,7 +46,7 @@ Problems:
 3. from 'redux' and from 'react-redux' is different
 
 Router:
-/:  
+/:  default is login page
 /login: 
 /register:用户注册
 

@@ -31,3 +31,17 @@ video{
 	padding: 9px 10px;
 	display: block;
 }
+
+#login_container{
+	width: 40%;
+	margin:0 auto;
+}
+.login-form {
+  max-width: 300px;
+}
+.login-form-forgot {
+  float: right;
+}
+.login-form-button {
+  width: 100%;
+}
