@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "antd": "^2.5.0",
+    "bcryptjs": "^2.4.0",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
     "react": "^15.4.1",

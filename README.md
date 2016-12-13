@@ -23,6 +23,11 @@ dependencies:
 	$ npm install jquery moment --save-dev
 *antd 
 	1. package.theme: config in package.json the theme field.  
+*bcrypt.js  npm install bcrypt.js
+
+
+
+
 
 structure
 * app/
@@ -58,4 +63,8 @@ Ubuntu:
 #nginx启动和关闭：
 #nginx -c /etc/nginx/nginx.conf
 #nginx -s stop
+
+
+程序逻辑
+1. 如果用户已经登陆了！直接进入主界面！否则进入登陆界面，已经通过登陆界面可以进入注册界面
 
