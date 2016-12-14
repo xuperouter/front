@@ -2,16 +2,37 @@
  * Created by Sheldon on 2016/11/28.
  */
 var React = require('react');
+var Config = require('../Config/Config.js');
+
+
 import {Form , Icon , Input, Button , Checkbox } from 'antd';
 
 const FormItem = Form.Item;
+
 
 const LoginComponent = Form.create()(React.createClass({
 
     getDefaultProps: function(){
         return{
             login:(username,password)=>{
-                console.log("user "+username+" is logging");
+                var data = {
+                    username:username,
+                    password:password
+                };
+
+                var url = "http://"+Config.Server_IP+":"+Config.Server_Port+"/easydesign/login";
+                console.log("the url is "+url);
+                console.log(JSON.stringify(data));
+                fetch(url,{
+                    method:'POST',
+                    body:JSON.stringify(data)
+                })
+                .then(function(data){
+                    console.log('request succeed with JSON response',data);
+                })
+                .catch(function(error){
+                    console.log('request failed',error);
+                })
             }
         }
     },
@@ -61,7 +82,6 @@ const LoginComponent = Form.create()(React.createClass({
         }
 
         this.props.login(this.state.username,this.state.password);
-        console.log(this.state);
     },
 
 
@@ -73,14 +93,14 @@ const LoginComponent = Form.create()(React.createClass({
                     {getFieldDecorator('usename',{
                         rules:[{required:true,message:'Please Input your username!'}],
                     })(
-                        <Input addonBefore={<Icon type='user' />} placeholder="UserName" onchange={this.changeUserName}/>
+                        <Input addonBefore={<Icon type='user' />} placeholder="UserName" onChange={this.changeUserName}/>
                     )}
                 </FormItem>
                 <FormItem>
                     {getFieldDecorator('password',{
                         rules:[{required:true,message:"Please input your Password!"}],
                     })(
-                        <Input addonBefore={<Icon type='lock' />} type='password' placeholder='Password' onchange={this.changePassWord}/>
+                        <Input addonBefore={<Icon type='lock' />} type='password' placeholder='Password' onChange={this.changePassWord}/>
                     )}
                 </FormItem>
                 <FormItem>
