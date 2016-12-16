@@ -1,32 +1,10 @@
 import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button } from 'antd';
 import 'antd/dist/antd.css';
+import {Link} from 'react-router';
+
 const FormItem = Form.Item;
 const Option = Select.Option;
 var React = require('react');
-
-const residences = [{
-  value: 'zhejiang',
-  label: 'Zhejiang',
-  children: [{
-    value: 'hangzhou',
-    label: 'Hangzhou',
-    children: [{
-      value: 'xihu',
-      label: 'West Lake',
-    }],
-  }],
-}, {
-  value: 'jiangsu',
-  label: 'Jiangsu',
-  children: [{
-    value: 'nanjing',
-    label: 'Nanjing',
-    children: [{
-      value: 'zhonghuamen',
-      label: 'Zhong Hua Men',
-    }],
-  }],
-}];
 
  const RegistrationForm = Form.create()(
  	React.createClass({
@@ -74,13 +52,6 @@ const residences = [{
   					offset:6,
   				},
   			};
-  			const prefixSelector = getFieldDecorator('prefix',{
-  				initialValue:'86',
-  			})(
-  				<Select className='icp-selector'>
-  				<Option value="86">+86</Option>
-  				</Select>
-  			);
   			return (
   				<Form horizontal onSubmit={this.handleSubmit}>
   					<FormItem
@@ -132,7 +103,7 @@ const residences = [{
         			{...formItemLayout}
         			label={(
         				<span>
-        				Nickname&nbsp;
+        				Username&nbsp;
         				<Tooltip title="What do you want other to call you?">
         				<Icon type="question-circle-o" />
         				</Tooltip>
@@ -140,52 +111,14 @@ const residences = [{
         				)}
         			hasFeedback
         			>
-        			{getFieldDecorator('nickname', {
+        			{getFieldDecorator('username', {
         				rules: [{ required: true, message: 'Please input your nickname!' }],
         			})(
         			<Input />
         			)}
         			</FormItem>
-        			<FormItem
-        			{...formItemLayout}
-        			label="Habitual Residence"
-        			>
-        			{getFieldDecorator('residence', {
-        				initialValue: ['zhejiang', 'hangzhou', 'xihu'],
-        				rules: [{ type: 'array', required: true, message: 'Please select your habitual residence!' }],
-        			})(
-        			<Cascader options={residences} />
-        			)}
-        			</FormItem>
-        			<FormItem
-        			{...formItemLayout}
-        			label="Phone Number"
-        			>
-        			{getFieldDecorator('phone', {
-        				rules: [{ required: true, message: 'Please input your phone number!' }],
-        			})(
-        			<Input addonBefore={prefixSelector} />
-        			)}
-        			</FormItem>
-        			<FormItem
-        			{...formItemLayout}
-        			label="Captcha"
-        			extra="We must make sure that your are a human."
-        			>
-        			<Row gutter={8}>
-        			<Col span={12}>
-        			{getFieldDecorator('captcha', {
-        				rules: [{ required: true, message: 'Please input the captcha you got!' }],
-        			})(
-        			<Input size="large" />
-        			)}
-        			</Col>
-        			<Col span={12}>
-        			<Button size="large">Get captcha</Button>
-        			</Col>
-        			</Row>
-        			</FormItem>
-        			<FormItem {...tailFormItemLayout} style={{ marginBottom: 8 }}>
+        			
+              <FormItem {...tailFormItemLayout} style={{ marginBottom: 8 }}>
         			{getFieldDecorator('agreement', {
         				valuePropName: 'checked',
         			})(
